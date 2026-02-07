@@ -62,7 +62,7 @@ resource "aws_ami_from_instance" "catalogue" {
 # alb target group
 
 resource "aws_lb_target_group" "catalogue" {
-  name     = "${lccal.common_name_suffix}-catalogue"
+  name     = "${local.common_name_suffix}-catalogue"
   port     = 8080
   protocol = "HTTP"
   vpc_id   = local.vpc_id
