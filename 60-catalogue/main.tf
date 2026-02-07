@@ -2,7 +2,7 @@ resource "aws_instance" "catalogue" {
 
   ami = var.ami_id
   instance_type = "t3.micro"
-  vpc_security_group_ids = [local.catalogue_sg_id]
+  vpc_security_group_ids = "local.catalogue_sg_id"
   subnet_id = local.private_subnet_id
 
     tags = merge (
@@ -65,7 +65,7 @@ resource "aws_lb_target_group" "catalogue" {
   name     = "${local.common_name_suffix}-catalogue"
   port     = 8080
   protocol = "HTTP"
-  vpc_id   = local.vpc_id
+  vpc_id   = "local.vpc_id"
   deregistration_delay = 60
   health_check {
     interval            = 10
