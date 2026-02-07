@@ -35,7 +35,7 @@ resource "aws_lb_listener" "front_end" {
 
 }
 
-resource "aws_route53_record" "" {
+resource "aws_route53_record" "frontend_alb" {
   zone_id = var.zone_id
   name    = "roboshop-${var.environment}.${var.domain_name}" #roboshop-dev.nareshplace.fun
   type    = "A"
