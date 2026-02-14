@@ -6,6 +6,6 @@
 
 module "components" {
     source = "git::https://github.com/nareshungarala396/terraform-roboshop-component.git?ref=main"
-    components = var.component
+    component = var.component
     rule_priority = var.rule_priority
 }
