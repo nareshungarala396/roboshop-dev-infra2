@@ -1,3 +1,7 @@
+variable "component" {
+    default = "catalogue"
+}
+
 variable "rule_priority" {
     default = 10
 }
@@ -7,7 +11,7 @@ variable "components" {
         catalogue = {
             rule_priority = 10
         }
-        user = {  
+        user = {
             rule_priority = 20
         }
         cart = {
@@ -22,6 +26,5 @@ variable "components" {
         frontend = {
             rule_priority = 10
         }
-       
     }
 }
